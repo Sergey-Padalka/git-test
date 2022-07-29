@@ -1,9 +1,12 @@
 * {
   box-sizing: border-box;
 }
+
 body {
   background-color: skyblue;
+
 }
+
 .wraper {
   min-height: 100vh;
   display: flex;
@@ -11,6 +14,7 @@ body {
   max-width: 1280px;
   margin: auto;
 }
+
 .carusel {
   height: 100px;
   background-color: white;
@@ -19,7 +23,9 @@ body {
   overflow: hidden;
   max-width: 100%;
   position: relative;
+
 }
+
 .carusel::before,
 .carusel::after {
   content: "";
@@ -28,34 +34,42 @@ body {
   z-index: 1;
   width: 200px;
   height: 100%;
+
   background: linear-gradient(to right, #fff 0%, transparent 100%);
 }
+
 .carusel::before {
   left: 0;
 }
+
 .carusel::after {
   right: 0;
-  transform: rotate(180deg);
+  transform: rotate(180deg)
 }
+
 .slide {
   display: flex;
   height: calc(100% - 10px);
   align-items: center;
   animation: slideshow 30s linear infinite;
 }
+
 .slide__image {
   width: auto;
   height: inherit;
   margin: 0 40px;
 }
+
 .carusel:hover .slide {
   -webkit-animation-play-state: paused;
   animation-play-state: paused;
 }
+
 @keyframes slideshow {
   0% {
     transform: translateX(0);
   }
+
   100% {
     transform: translateX(-100%);
   }
